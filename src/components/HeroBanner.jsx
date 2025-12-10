@@ -92,18 +92,18 @@ const HeroBanner = ({ content }) => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="flex gap-4"
+              className="flex gap-3"
             >
               <button 
                 onClick={handleWatchTrailer}
-                className="flex items-center gap-2 bg-white text-black px-6 md:px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition active:scale-95 shadow-lg shadow-white/10"
+                className="flex items-center gap-2 bg-white text-black px-4 md:px-8 py-3 rounded-xl font-bold hover:bg-gray-200 transition active:scale-95 shadow-lg shadow-white/10 whitespace-nowrap text-sm md:text-base"
               >
                 <IoPlay size={20} /> Watch Trailer
               </button>
               
               <Link 
                 to={linkPath}
-                className="flex items-center gap-2 bg-gray-600/70 text-white px-6 md:px-8 py-3 rounded-full font-bold hover:bg-gray-600/90 backdrop-blur-md transition active:scale-95"
+                className="flex items-center gap-2 bg-gray-600/70 text-white px-4 md:px-8 py-3 rounded-xl font-bold hover:bg-gray-600/90 backdrop-blur-md transition active:scale-95 whitespace-nowrap text-sm md:text-base"
               >
                 <IoInformationCircleOutline size={24} /> More Info
               </Link>
