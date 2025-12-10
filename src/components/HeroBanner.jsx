@@ -49,9 +49,7 @@ const HeroBanner = ({ content }) => {
   };
 
   return (
-    // 🔴 FIX: Reduced mobile height from [65vh] to [55vh]. 
-    // This makes it wider relative to its height, requiring less zooming.
-    <div className="relative w-full h-[55vh] md:h-[85vh] overflow-hidden mb-8">
+    <div className="relative w-full h-[65vh] md:h-[85vh] overflow-hidden mb-8">
       <VideoModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} videoId={videoId} />
 
       <AnimatePresence mode='wait'>
@@ -63,26 +61,20 @@ const HeroBanner = ({ content }) => {
           transition={{ duration: 0.8 }}
           className="absolute inset-0"
         >
-          {/* Background Image */}
           <div 
-            // 🔴 FIX: Changed back to 'bg-top' for ALL screens.
-            // Combined with the shorter height above, this anchors faces to the top 
-            // and shows more of the image on mobile.
-            className="absolute inset-0 bg-cover bg-top"
+            className="absolute inset-0 bg-cover bg-center md:bg-top"
             style={{ backgroundImage: `url(${IMG_PATH}${current.backdrop_path})` }}
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-transparent" />
           </div>
 
-          {/* Content */}
-          {/* 🔴 FIX: Adjusted padding and justification for the shorter mobile banner */}
-          <div className="absolute bottom-0 left-0 p-6 md:p-12 w-full md:w-2/3 lg:w-1/2 z-10 flex flex-col justify-end h-full pb-16 md:pb-32">
+          <div className="absolute bottom-0 left-0 p-6 md:p-12 w-full md:w-2/3 lg:w-1/2 z-10 flex flex-col justify-end h-full pb-20 md:pb-32">
             <motion.h1 
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="text-3xl md:text-6xl font-black text-white mb-3 md:mb-4 leading-tight drop-shadow-2xl"
+              className="text-4xl md:text-6xl font-black text-white mb-4 leading-tight drop-shadow-2xl"
             >
               {title}
             </motion.h1>
@@ -91,7 +83,7 @@ const HeroBanner = ({ content }) => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-gray-200 text-sm md:text-lg mb-6 line-clamp-2 md:line-clamp-2 drop-shadow-md font-medium"
+              className="text-gray-200 text-sm md:text-lg mb-6 line-clamp-3 md:line-clamp-2 drop-shadow-md font-medium"
             >
               {description}
             </motion.p>
@@ -120,7 +112,6 @@ const HeroBanner = ({ content }) => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Slide Indicators */}
       <div className="absolute bottom-6 right-6 flex gap-2 z-20">
         {content.map((_, i) => (
           <div 
