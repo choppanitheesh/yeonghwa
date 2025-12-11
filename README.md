@@ -2,7 +2,7 @@
 
 **yeonghwa** is a modern, full-stack movie discovery application built with the **MERN Stack** (MongoDB, Express, React, Node.js). It offers a premium user experience similar to Netflix or Apple TV, featuring a sleek dark UI, real-time search, personalized recommendations, and a responsive design that works beautifully on all devices.
 
-![yeonghwa Screenshot]([https://via.placeholder.com/1200x600?text=Sequel+App+Screenshot](https://res.cloudinary.com/djni7gwm4/image/upload/v1765447095/Screenshot_2025-12-11_152749_lxdumf.png)) 
+![yeonghwa Screenshot](https://res.cloudinary.com/djni7gwm4/image/upload/v1765447095/Screenshot_2025-12-11_152749_lxdumf.png)
 
 ---
 
